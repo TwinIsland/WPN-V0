@@ -34,6 +34,6 @@ Install the execusive pack in your windows
 2. [Install Channel 2](https://gitee.com/wyatthuang/Free-VPN/attach_files)
 
 Check the Source Code
-1. [Source code](https://gitee.com/wyatthuang/RFV)
+1. [Source code](https://gitee.com/wyatthuang/Free-VPN)
 
-more information please visit [RFV -- Free VPN](www.wyatthuang.gitee.io/rfv_page)
+more information please visit [RFV -- Free VPN](https://wyatthuang.gitee.io/rfv_page/)
