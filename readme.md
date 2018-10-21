@@ -35,3 +35,5 @@ Install the execusive pack in your windows
 
 Check the Source Code
 1. [Source code](https://gitee.com/wyatthuang/RFV)
+
+more information please visit [RFV -- Free VPN](www.wyatthuang.gitee.io/rfv_page)
