@@ -1,22 +1,18 @@
 # -*- coding: gb2312 -*-
-
 import os,host,get_brook,fun,catch,time,urllib.request,urllib,update_update
 
-def proxy(mode,ip):
-    if mode == "dc":
-        os.system("cancel_proxy.bat")
-    elif mode == "c":
-        con = 'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f'
-        os.system(con)
-        con = 'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /d "' + ip + '" /f'
-        os.system(con)
+def proxy_connect(ip):
+    con = 'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f'
+    os.system(con)
+    con = 'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /d "' + ip + '" /f'
+    os.system(con)
 
 
 def update_check():
     try:
         print("检查更新。。")
         if str(update_update.get_update().split("::")[0]) == str(fun.read_txt("version\\version.txt").split("::")[0]):
-            print("成功！  程序以为最新版本")
+            print("成功！  程序已为最新版本")
         else:
             print("程序有最新版本！\n"
                   "最新版本：" + update_update.get_update().split("::")[0] + "\n"
@@ -63,15 +59,10 @@ def initial():
         print("成功！  网络适配成功")
     fun.fence()
 
-os.system("del /f version\\temp\\update_sc")
-os.system("del /f temp_run\\run.bat")
-os.system("taskkill -f -im brook.exe")
-print("\n初始化程序。。")
-fun.fence()
-print("重置系统代理服务器。。")
-proxy("dc", "none")
-print("成功！  代理服务器重置成功")
-os.system("cls")
+# 初始化系统
+os.system("kill.bat")
+
+# 开始
 version = fun.read_txt("version/version.txt").split("::")[0]
 os.system("cls")
 print("|-----------------------------------------------------|\n"
@@ -89,6 +80,12 @@ print("|-----------------------------------------------------|\n"
       "|-----------------------------------------------------|")
 print("\n获取开始")
 fun.fence()
+
+
+
+## new version begin: more way allocation: ss
+
+
 print("开始获取 Brook GFW Broker 账号")
 print("正在爬取网页数据，请稍等。。")
 catch.catch()
@@ -107,6 +104,11 @@ except BaseException:
     print("错误！  解析异常")
     fun.wrong()
 time.sleep(3)
+
+
+# new version end
+
+
 os.system("cls")
 print("|-----------------------------------------------------|\n"
       "|                                                     |\n" 
@@ -126,9 +128,14 @@ print("开始配置模板文档。。")
 os.system("copy mode temp_run\\run.bat")
 print("成功！  已将模板文档写入运行文档")
 print("再次解析allocate字符串。。")
-IP = content_pre.split("%%")[0] + ":" + content_pre.split("%%")[1]
+
+
+# new version begin: also need to write to the SS allocation fold
+
+
+IP_brook = content_pre.split("%%")[0] + ":" + content_pre.split("%%")[1]
 password = content_pre.split("%%")[2]
-merge = "brook client -l 127.0.0.1:8080 -i 127.0.0.1 -s " + IP + " -p " + password + " --http"
+merge = "brook client -l 127.0.0.1:8080 -i 127.0.0.1 -s " + IP_brook + " -p " + password + " --http"
 print("成功！  重置allocate")
 print("开始写入总运行脚本。。")
 try:
@@ -138,6 +145,11 @@ except BaseException:
     print("写入失败")
     fun.wrong()
 print("成功！  写入成功")
+
+
+# nre version end
+
+
 time.sleep(3)
 os.system("cls")
 fun.succedd()
@@ -158,18 +170,24 @@ while True:
     if a == "con":
         print("开始连接。。")
         print("设置代理。。")
-        proxy("c","127.0.0.1:8080")
+
+        # new version change the brook mode IP number to adapt the ss account
+        # ss stable IP: 127.0.0.1:1080
+
+        proxy_connect("127.0.0.1:8080")
         os.system("run_it.bat")
         print("连接成功！")
+
+        # nre version end
+
+
         fun.sys_say("如果想退出 VPN，请输入 disc 而不是直接关闭此窗口，否则可能会造成电脑无法联网的情况","注意！")
     if a == "disc":
-        proxy("dc","none")
-        os.system("taskkill -f -im brook.exe")
-        os.system("taskkill -f -im cmd.exe")
+        os.system("kill.bat")
         os.system("cls")
         a = 5
         while a > 0:
-            print("成功退出VPN")
+            print("成功退出VPN！")
             print("程序将在 " + str(a) + " 秒后关闭")
             a = a - 1
             time.sleep(1)

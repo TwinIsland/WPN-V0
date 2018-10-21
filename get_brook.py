@@ -5,13 +5,13 @@ import random
 a = open("sc","r")
 con = str(a.read())
 
-reg = r'text=brook://default(.{60})'
-wordreg = re.compile(reg)
-wordreglist = re.findall(wordreg,con)
+reg_brook = r'text=brook://default(.{60})'
+wordreg = re.compile(reg_brook)
+brook_list = re.findall(wordreg,con)
 
 def vpn_num():
     count = 1
-    for i in wordreglist:
+    for i in brook_list:
         count = count + 1
         return count
 
@@ -23,7 +23,7 @@ def allocate():
 def allocate_line():
     count1 = 0
     num = allocate()
-    for i in wordreglist:
+    for i in brook_list:
         if count1 == num:
             am = pre(i)
             return am
@@ -40,4 +40,4 @@ def pre(i):
     merge = account + "%%" + door + "%%" + password
     return merge
 
-#   This line of code is for pick a adaptive allocation: print(allocate_line()
+#   This line of code is for pick a adaptive allocation: print(allocate_line())

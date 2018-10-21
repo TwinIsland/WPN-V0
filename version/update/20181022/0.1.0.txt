@@ -1,0 +1,8 @@
+1. 新增SS账号端口，有助于缓解服务器压力，使翻墙速度更快
+2. Brook 配置 IP 修改
+2. 爬虫优化
+3. 程序报错优化
+4. Shadowsocks 可用 Pac 模式，缓解服务器压力
+5. 修复一些 Bug
+6. 更新 GFW Broker 程序 -- Brook 和 Shadowsocks
+7. 程序性能优化，删除了一些不必要代码
