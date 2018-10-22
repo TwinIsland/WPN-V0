@@ -1,8 +1,6 @@
 ﻿# Rattlemander Free VPN
 
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
+![avatar](https://gitee.com/wyatthuang/Free-VPN/blob/master/statement.png)
 Rattlemander Free VPN (RFV) is a free, fast, safty and open-source website connected and GFW broker tool.
 # Feature
   - FREE
