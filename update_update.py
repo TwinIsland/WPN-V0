@@ -13,7 +13,7 @@ def get_update():
     a = open("version\\temp\\update_sc", "r")
     con = str(a.read())
 
-    reg = r'style="display:none;">\\n(.{60})'
+    reg = r'style="display:none;">\\n(.{100})'
     wordreg = re.compile(reg)
     wordreglist = re.findall(wordreg, con)
     for i in wordreglist:

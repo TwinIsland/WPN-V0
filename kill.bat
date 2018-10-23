@@ -3,8 +3,10 @@
 :: 在这里自定义初始化系统项目
 del /f version\temp\update_sc
 del /f temp_run\run.bat
+del /f temp_run\ss\gui-config.json
 taskkill -f -im brook.exe
-taskkill -f -im ssc.exe
+taskkill -f -im ss.exe
+
 
 :: Proxy setting 加强版 By Wyatt
 rem 禁用自动检测设置

@@ -13,10 +13,14 @@ run_it: 运行暂时的配置后的 temp_run\run.bat 打开VPN
 客户文件可删除： drive   interface  和  example 文件夹
 
 version 文件夹规则：
-1. version\version （目前版本）中： 0.0.1::20181018::www.test.com::0  的::0代表不使用更新服务，如果为1，则使用
+1. version\version （目前版本）中： 0.0.1::20181018::www.test.com::0::update_content::1  的::0代表不使用更新服务，如果为1，则使用，update_content包含更新信息，1代表是否强制要求更新（前提是必须使用更新服务）
+
 2.version\temp (当前版本)： 此文件为临时文件，从远程服务器获取，用于比对目前与当前版本
 服务器地址： https://gitee.com/wyatthuang/codes/5qk9abdxo1p6ejzc4trfv87
 
 Host 文件所在地：C:\Windows\System32\drivers\etc\hosts
 
 host\result 中储存了host文件修改结果，如果为yes，即为已修改
+
+Issue;
+1. Brook 晚上没法用？！

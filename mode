@@ -3,5 +3,3 @@ if "%1" == "h" goto begin
 mshta vbscript:createobject("wscript.shell").run("%~nx0 h",0)(window.close)&&exit 
 :begin 
 :: Rattlemander VPN Allocate is under this line
-ss\ss.exe
-

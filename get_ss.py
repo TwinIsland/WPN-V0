@@ -75,4 +75,5 @@ def pre(i):
     merge = server + "%%" + password + "%%" + pass_way
     return merge
 
+print(allocate_line())
 #   This line of code is for pick a adaptive allocation: print(allocate_line())

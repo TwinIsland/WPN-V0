@@ -1,8 +1,0 @@
-@echo off 
-if "%1" == "h" goto begin 
-mshta vbscript:createobject("wscript.shell").run("%~nx0 h",0)(window.close)&&exit 
-:begin 
-:: Rattlemander VPN Allocate is under this line
-ss\ss.exe
-
-brook client -l 127.0.0.1:8080 -i 127.0.0.1 -s lon1.brookfree.pw:7000 -p DOUBIphrQGGFFvw --http
