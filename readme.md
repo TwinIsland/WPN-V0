@@ -17,7 +17,8 @@ Rattlemander Free VPN (RFV) is a free, fast, safty and open-source website conne
 Thanks for the person adn website above, without them, RFV tool will not born
 
 # Version
-1. 0.02  released in 2018/10/20
+1. 0.0.2  released in 2018/10/20
+2. 0.1.0  released in 2018/10/24
 
 ### Device Support
 1. Windows 10
