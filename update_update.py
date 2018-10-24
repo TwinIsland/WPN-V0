@@ -23,3 +23,5 @@ def get_update():
     except BaseException:
         return 0
     return data
+
+get_update()

@@ -7,14 +7,14 @@ def catch():
 
         # 写入brook 配置
         # 不用分析二级域名
-        print("开始分析brook账号。。")
+        print("开始分析通配账号。。")
         a = open("sc", "w")
         html_doc = "https://doub.io/sszhfx/"
         req = urllib.request.Request(html_doc)
         webpage = urllib.request.urlopen(req)
         html = webpage.read()
         a.write(str(html))
-        print("成功！ 分析brook账号")
+        print("成功！ 分析统配账号")
 
 
         # 分析ss账号地址，需要分析二级域名

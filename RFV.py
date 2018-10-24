@@ -17,7 +17,7 @@ def update_check():
             update_content = update_update.get_update()
             print("程序有最新版本！\n"
                   "最新版本：" + update_content.split("::")[0] + "\n"
-                  "目前版本：" + fun.read_txt("version\\version.txt")[0] + "\n" 
+                  "目前版本：" + fun.read_txt("version\\version.txt").split("::")[0] + "\n" 
                   "下载地址：" + update_content.split("::")[2] + "\n"
                   "释放时间：" + update_content.split("::")[1] + "\n"
                   "更新说明：" + update_content.split("::")[4] + "\n"
@@ -40,11 +40,12 @@ def initial():
     try:
         a = open("version\\version.txt","r")
         ccc = str(a.read().split("::")[3])
-        if ccc == "1":
-            update_check()
     except FileNotFoundError:
         print("错误！  文件不完整，请重新下载")
         fun.wrong()
+    if ccc == "1":
+        update_check()
+
 
     print("检查host文件完整性。。")
     host.host()
@@ -99,23 +100,27 @@ fun.fence()
 ## new version begin: more way allocation: ss
 
 print("开始获取 Brook & SS GFW Broker 账号")
-print("正在爬取网页数据，请稍等。。")
-catch.catch()
-print("成功！  获取账号")
-print("分配接口。。")
-a = random.randint(0,1)
 
-if a == 0 or 1:
+a = random.randint(0,3)
+if a == 0:
+    print("分配到 Brook 端口")
+    print("正在爬取网页数据，请稍等。。")
+    catch.catch()
+    print("成功！  获取账号")
+    print("分配接口。。")
     allocate = str(get_brook.allocate()+1)
     num = str(get_brook.vpn_num())
     content_pre = get_brook.allocate_line()
-    print("分配到 Brook 端口")
     tool = "brook"
 else:
+    print("分配到 SS 端口")
+    print("正在爬取网页数据，请稍等。。")
+    catch.catch()
+    print("成功！  获取账号")
+    print("分配接口。。")
     allocate = str(get_ss.allocate()+1)
     num = str(get_ss.vpn_num())
     content_pre = get_ss.allocate_line()
-    print("分配到 SS 端口")
     tool = "ss"
 
 print("接口总数：" + num + " | 分配接口：" + allocate + " | 混淆方法：" + " | 随机数组法")
