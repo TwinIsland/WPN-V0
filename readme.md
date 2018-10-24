@@ -6,6 +6,7 @@ Rattlemander Free VPN (RFV) is a free, fast, safty and open-source website conne
   - FREE
   - Open source
   - Fast
+  - Safety
 
 
 # Thanks
