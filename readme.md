@@ -30,7 +30,7 @@ Thanks for the person adn website above, without them, RFV tool will not born
 
 
 Install the execusive pack in your windows 
-1. [Install Channel 1](http://223.94.4.146:91/file/download?code=C42973E16F7795C5)
+1. [Install Channel 1](http://223.94.4.133:91/file/download?code=FD5FE10A8E66FDF4)
 2. [Install Channel 2](https://gitee.com/wyatthuang/Free-VPN/attach_files)
 
 Check the Source Code
