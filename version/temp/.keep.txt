@@ -1,0 +1,4 @@
+It is a empty fold, absolutly!
+but please keep it, ot the application cannot run
+
+only for GIT
