@@ -1,4 +1,4 @@
-# Rattlemander Free VPN
+# Rattlemander Free VPN（This project cannot be used now, code there only for study）
 
 Rattlemander Free VPN (RFV) is a free, fast, safty and open-source website connected and GFW broker tool.
 # Feature
